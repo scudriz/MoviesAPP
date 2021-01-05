@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    /*Siempre tener en cuenta:
+        name: en el caso del host, debe contener el nombre en androidx.
+        En caso de navegación, contiene la ruta de la clase que lo define.
+        defaultNavHost: Anuncia que este será un contenedor donde se pueden
+                        agregar otros fragments. Recordar que los fragmentos
+                        necesitan con Host donde pueden vivir
+        navGraph: Ruta donde está definida la gráfica de navegación
+    */
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph = "@navigation/main_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
